@@ -1,1 +1,1 @@
-# UCLA-Project-2
+# UCLA-Project-Swim-Tracker

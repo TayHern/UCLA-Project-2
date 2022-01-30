@@ -11,7 +11,11 @@ Workout.init(
         primaryKey: true,
         autoIncrement: true,
       },
-      stroke_id: {
+      workout_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      },
+      description: {
         type: DataTypes.STRING,
         allowNull: false,
       },

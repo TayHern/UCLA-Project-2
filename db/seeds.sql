@@ -5,4 +5,4 @@ CREATE TABLE workouts (
     stroke_id STRING NOT NULL,
     duration TIME NOT NULL,
     difficulty INTEGER NOT NULL
-)
+);

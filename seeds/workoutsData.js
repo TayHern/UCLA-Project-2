@@ -6,3 +6,8 @@
 //    duration TIME NOT NULL,
  //   difficulty INTEGER NOT NULL
 //);
+const { Workouts } = require('workouts');
+
+const workoutData = [
+    
+];

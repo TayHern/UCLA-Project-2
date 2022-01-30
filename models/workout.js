@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('');
+const sequelize = require('/config/connections.js');
 
 class Workout extends Model {}
 
-Gallery.init(
+Workout.init(
     {
       workout_id: {
         type: DataTypes.INTEGER,

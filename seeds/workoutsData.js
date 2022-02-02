@@ -68,7 +68,7 @@ const workoutData = [
         difficulty: '3'
     },
     {
-        workout_name: 'Keifer Swim Workout',
+        workout_name: 'Workout 12',
         description: 'Warm Up: 100 swim, 100 pull, 100 kick, 100 swim, 400 yards, 400 cumulative yards, 16 x 25’s @ :10 rest all dolphin kick with a board hands resting on top of the bottom of the board not holding it, head down in the water, long arms. Lift your head to breathe every 5 kicks or more, 400 yards, 800 cumulative yards, 6 x 50’s @ :10 rest butterfly drill, 2- Right arm only down, left arm only back, 2- Doubles (2 right arm, 2 left arm, 2 full strokes), 2 – freestyle recover, 200 freestyle pull, 500 yards, 1300 cumulative yards. Main Set: 6 x 75’s @ :20 rest, 2x; 1- 25 underwater dolphin kick, 25 butterfly swim, 25 recover easy free, 2- 25 recover, 25 underwater dolphin kick, 25 butterfly swim, 3 – 25 butterfly swim, 25 recover, 25 underwater dolphin kick, 450 yards, 1750 cumulative yards, 8 x 50’s freestyle pull @ :10 rest, Moderate heart rate 140-150, 200 easy no gear choice, 600 yards, 2350 cumulative yards, 8 x 25’s @:15 rest. Treat the fast 25’s as a broken 100 fly, add up your times when you are done. Odds sprint butterfly, Even easy recover choice, 200 yards, 2550 cumulative yards, 100 easy pull, 100 scull choice, 200 yards, 2750 cumulative yards',
         duration: '01:00:00',
         difficulty: '3'

@@ -11,9 +11,6 @@ const helpers = require('./utils/helpers');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-<<<<<<< HEAD
-app.engine('handlebars', hbs.express)
-=======
 const sess = {
   secret: 'Super secret secret',
   cookie: {},
@@ -40,4 +37,3 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
->>>>>>> develop

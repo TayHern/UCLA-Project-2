@@ -15,14 +15,16 @@
       <div class="nav-wrapper cyan darken-4">
           <a href="#" class="brand-logo">Swim Fast</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <a href="/">Home</a>
-            {{#if loggedIn}}
+            <li><a href="/">Home</a>
+              {{#if loggedIn}}
+            </li>
             <button id="logout" class="btn-no-style">Logout</button>
-            {{else}}
-            <a href="/login">Login</a>
-            {{/if}}
-            <li><a href="/UCLA-Project-Swim-Tracker/views/Swimmer.handlebars">New Swimmer</a></li>
-          </ul>
+              {{else}}
+            <li><a href="/login">Login</a>
+              {{/if}}
+            </li>
+            <li><a href="/swimmer">New Swimmer</a>
+            </li>
             </nav>
           <main>
             <div class="session">
@@ -32,7 +34,8 @@
             {{#if loggedIn}}
             <script src="/js/logout.js"></script>
             {{/if}}
-        </div>
+          </ul>
+      </div>
         </div>
 </head>
 

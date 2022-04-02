@@ -5,13 +5,14 @@ const { Session } = require('../../models');
 router.post('/', async (req, res) => {
   try {
     const dbSessionData = await Session.create({
-      username: req.body.username,
-      email: req.body.email,
-      password: req.body.password,
+      session_id: req.body.session_id,
+      user_id: req.body.user_id,
+      workout_id: req.body.workout_id,
+      date: req.body.date,
     });
 
     req.session.save(() => {
-      req.session.loggedIn = true;
+      req.session.session_id = true;
 
       res.status(200).json(dbSessionData);
     });

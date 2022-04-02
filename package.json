@@ -4,18 +4,18 @@
     "description": "",
     "main": "server.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "node server.js"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
     },
     "repository": {
-      "type": "git",
-      "url": "git+https://github.com/TayHern/UCLA-Project-Swim-Tracker.git"
+        "type": "git",
+        "url": "git+https://github.com/TayHern/UCLA-Project-Swim-Tracker.git"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "bugs": {
-      "url": "https://github.com/TayHern/UCLA-Project-Swim-Tracker/issues"
+        "url": "https://github.com/TayHern/UCLA-Project-Swim-Tracker/issues"
     },
     "homepage": "https://github.com/TayHern/UCLA-Project-Swim-Tracker#readme",
     "dependencies": {
@@ -25,10 +25,11 @@
         "express": "^4.17.2",
         "express-handlebars": "^6.0.2",
         "express-session": "^1.17.2",
+        "handlebars": "^4.7.6",
+        "moment": "^2.29.1",
+        "mysql2": "^2.2.5",
         "node": "^17.4.0",
         "nodemon": "^2.0.15",
-        "handlebars": "^4.7.6",
-        "mysql2": "^2.2.5",
         "sequelize": "^6.3.5"
     },
     "devDependencies": {

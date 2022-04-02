@@ -23,19 +23,19 @@ router.post('/', async (req, res) => {
 });
 
 //put - create new workout
-router.put('/', async (req, res) => {
+router.put('/:id', async (req, res) => {
   try {
     const dbSessionData = 
   }
 });
 
 //get - get one session
-router.get('/', async (req, res) => {
+router.get('/:id', async (req, res) => {
 
 });
 
 //delete - delete session
-router.delete('/', async (req, res) => {
+router.delete('/:id', async (req, res) => {
 
 });
 

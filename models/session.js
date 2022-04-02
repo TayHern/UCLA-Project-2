@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const moment = require('moment');
 
 class Session extends Model {
   checkPassword(loginPw) {
@@ -19,16 +20,23 @@ Session.init(
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: true,
+      references: {
+        model: 'user',
+        key: 'id'
+      }
     },
     workout_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      autoIncrement: true,
+      references: {
+        model: 'workout',
+        key: 'id'
+      }
       },
     date: {
       type: DataTypes.STRING,
       allowNull: false,
+      defaultValue: moment().format('MM/DD/YYYY')
       },
   },
   {

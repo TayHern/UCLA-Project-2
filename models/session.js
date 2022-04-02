@@ -26,12 +26,10 @@ Session.init(
       allowNull: false,
       autoIncrement: true,
       },
-    },
     date: {
       type: DataTypes.STRING,
       allowNull: false,
       },
-    },
   },
   {
     hooks: {

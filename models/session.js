@@ -8,47 +8,44 @@ class Session extends Model {
   }
 }
 
-User.init(
+Session.init(
   {
-    id: {
+    session_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
-      type: DataTypes.STRING,
+    user_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      autoIncrement: true,
     },
-    email: {
-      type: DataTypes.STRING,
+    workout_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
+      autoIncrement: true,
       },
     },
-    password: {
+    date: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [6],
       },
     },
   },
   {
     hooks: {
-      async beforeCreate(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
+      async beforeCreate(newSessionData) {
+        newUserData.password = await bcrypt.hash(newSessionData.password, 10);
+        return newSessionData;
       },
     },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'session',
   }
 );
 
-module.exports = User;
+module.exports = Session;

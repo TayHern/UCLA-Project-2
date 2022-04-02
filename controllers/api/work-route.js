@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     console.log('================================')
     Workout.findAll({
         attributes: [
-        'wourkout_id', 
+        'workout_id', 
         'workout_name',
         'description',
         'difficulty'

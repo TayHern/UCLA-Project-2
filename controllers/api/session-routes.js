@@ -22,31 +22,117 @@ router.post('/', async (req, res) => {
   }
 });
 
-//put - create new workout
-router.put('/:id', async (req, res) => {
-  try {
-    const dbSessionData = 
+//put - update session
+router.put('/:id', (req, res) => {
+Session.update(
+  {
+    session_name: req.body.session_name
+  },
+  {
+    where: {
+      id: req.params.id
+    }
   }
+)
+  .then(dbSessionData => {
+    if (!dbSessionData) {
+      res.status(404).json({ message: 'No session found with this id' });
+      return;
+    }
+    res.json(dbSessionData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 //get - get one session
-router.get('/:id', async (req, res) => {
-
+router.get('/:id', (req, res) => {
+  console.log('================================')
+  Session.findAll({
+      attributes: [
+      'session_id', 
+      'user_id',
+      'workout_id',
+      'date'
+  ],
+  })
+  .then(dbSessionData => res.json(dbSessionData))
+  .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
 
 //delete - delete session
-router.delete('/:id', async (req, res) => {
-
+router.delete('/:id', (req, res) => {
+  Session.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+    .then(dbSessionData => {
+      if (!dbSessionData) {
+        res.status(404).json({ message: 'No session found with this id' });
+        return;
+      }
+      res.json(dbSessionData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 //put - add workout to session
-router.put('/', async (req, res) => {
-
+router.put('/:id', (req, res) => {
+  Session.update(
+    {
+      session_name: req.body.session_name
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+    .then(dbSessionData => {
+      if (!dbSessionData) {
+        res.status(404).json({ message: 'No sessions found with this id' });
+        return;
+      }
+      res.json(dbSessionData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 //put - remove workout
-router.put('/', async (req, res) => {
-
+router.put('/:id', (req, res) => {
+  Session.update(
+    {
+      session_name: req.body.session_name
+    },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  )
+    .then(dbSessionData => {
+      if (!dbSessionData) {
+        res.status(404).json({ message: 'No sessions found with this id' });
+        return;
+      }
+      res.json(dbSessionData);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
 
 module.exports = router;

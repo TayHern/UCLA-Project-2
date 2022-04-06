@@ -27,7 +27,7 @@ no
 ## Questions
 email us info@swimfast.com<br />
 <br />
-:octocat: Find me on GitHub: [mbelom](https://github.com/mbelom)<br />
+:octocat: Find me on GitHub: [mbelom](https://github.com/mbelom)  [TayHern](https://github.com/TayHern) [rhazama](https://github.com/rhazama)<br />
 <br />
 Email me with any questions: info@swimfast.com <br /><br />
   

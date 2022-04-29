@@ -4,13 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
-  <link rel="stylesheet" type="text/css" href="/css/tailwind.css">
+  <title>Swim Tracker</title>
+  <link rel="stylesheet" href="public/css/tailwind.css">
 </head>
 
 <body>
   <header>
-    <h1>Welcome to the Four Seasons Museum</h1>
+    <h1>Welcome to SwimFast, your very own personalized swim tracker</h1>
+        <img src="public/images/Swimfastlogo.png" alt="SwimFastLogo" width="300">
   </header>
   <nav>
     <a href="/">Home</a>
@@ -24,6 +25,8 @@
     
     <div class="gallery">
       {{{body}}}
+    <button class="SignInBttn">Sign in</button>
+    <p>Don't have an account? Sign up</p>
     </div>
   </main>
   {{#if loggedIn}}

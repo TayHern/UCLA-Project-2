@@ -1,1 +1,35 @@
-<h1>SwimTracker </h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swim Tracker</title>
+  <link rel="stylesheet" href="public/css/tailwind.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to SwimFast, your very own personalized swim tracker</h1>
+        <img src="public/images/Swimfastlogo.png" alt="SwimFastLogo" width="300">
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>

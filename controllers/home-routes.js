@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Gallery, Painting } = require('../models');
+//replace gallery and painting
+const { user, session } = require('../models');
 // Import the custom middleware
 const withAuth = require('../utils/auth');
 
@@ -17,5 +18,9 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/swimmer', (req, res) => {
+  res.render('swimmer');
+})
 
 module.exports = router;

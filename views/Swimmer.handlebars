@@ -11,22 +11,19 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-    <link rel="stylesheet" href="public/css/tailwind.css">
     <nav>
       <div class="nav-wrapper cyan darken-4">
           <a href="#" class="brand-logo">Swim Fast</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/">Home</a>
-              {{#if loggedIn}}
-            </li>
+            <a href="/">Home</a>
+            {{#if loggedIn}}
             <button id="logout" class="btn-no-style">Logout</button>
-              {{else}}
-            <li><a href="/login">Login</a>
-              {{/if}}
-            </li>
-            <li><a href="/swimmer">New Swimmer</a>
-            </li>
-       </nav>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+            <li><a>New Swimmer</a></li>
+          </ul>
+            </nav>
           <main>
             <div class="session">
               {{{body}}}
@@ -35,18 +32,5 @@
             {{#if loggedIn}}
             <script src="/js/logout.js"></script>
             {{/if}}
-          </ul>
-      </div>
-        </div>
+            </div>
 </head>
-
-<body>
-   <header>
-     <h1>Welcome to SwimFast, your very own personalized swim tracker</h1>
-     <img src="public/images/Swimfastlogo.png" alt="SwimFastLogo" width="300">
-   </header>
-     <button class="SignInBttn">Sign in</button>
-     <p>Don't have an account? Sign up</p>
-</body>
-
-</html>

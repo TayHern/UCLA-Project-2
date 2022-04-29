@@ -15,16 +15,14 @@
       <div class="nav-wrapper cyan darken-4">
           <a href="#" class="brand-logo">Swim Fast</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/">Home</a>
-              {{#if loggedIn}}
-            </li>
+            <a href="/">Home</a>
+            {{#if loggedIn}}
             <button id="logout" class="btn-no-style">Logout</button>
-              {{else}}
-            <li><a href="/login">Login</a>
-              {{/if}}
-            </li>
-            <li><a href="/swimmer">New Swimmer</a>
-            </li>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+            <li><a>New Swimmer</a></li>
+          </ul>
             </nav>
           <main>
             <div class="session">
@@ -34,12 +32,5 @@
             {{#if loggedIn}}
             <script src="/js/logout.js"></script>
             {{/if}}
-          </ul>
-      </div>
-        </div>
+            </div>
 </head>
-
-<body>
-</body>
-
-</html>

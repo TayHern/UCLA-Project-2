@@ -11,6 +11,7 @@
     <!--Import materialize.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="public/css/tailwind.css">
     <nav>
       <div class="nav-wrapper cyan darken-4">
           <a href="#" class="brand-logo">Swim Fast</a>
@@ -25,7 +26,7 @@
             </li>
             <li><a href="/swimmer">New Swimmer</a>
             </li>
-            </nav>
+       </nav>
           <main>
             <div class="session">
               {{{body}}}
@@ -40,6 +41,12 @@
 </head>
 
 <body>
+   <header>
+     <h1>Welcome to SwimFast, your very own personalized swim tracker</h1>
+     <img src="public/images/Swimfastlogo.png" alt="SwimFastLogo" width="300">
+   </header>
+     <button class="SignInBttn">Sign in</button>
+     <p>Don't have an account? Sign up</p>
 </body>
 
 </html>

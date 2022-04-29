@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang='en'>
-  <head>
-    
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  </head>
-    
-  <body>
-    <div class="row">
-        <div class="col s12 m7 center-align">
-          <div class="card large center-align">
-            <div class="card-image">
-              <img src="public/images/pool.jpeg">
-              <span class="card-title">Join Us</span>
-            </div>
-            <div class="card-content">
-              <p>SwimFast is a website where swimmers can find swim specific workout plans when training without an instructor. We provide workouts for swimmers of all skill levels to have easy access to premade custom-made workouts.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+<html lang="en">
 
-    <!--JavaScript at end of body for optimized loading-->
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swim Tracker</title>
+  <link rel="stylesheet" href="public/css/tailwind.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to SwimFast, your very own personalized swim tracker</h1>
+        <img src="public/images/Swimfastlogo.png" alt="SwimFastLogo" width="300">
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+  <main>
+    
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
 </html>

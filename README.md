@@ -4,6 +4,9 @@
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
 SwimFast is a website where swimmers can find swimmer specific workout plans when training without an instructor. We provide workouts for swimmers of all skill levels to have easy access to workouts both premade and custom made.
+
+to view go to : https://swim-tracker-22.herokuapp.com/
+
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
